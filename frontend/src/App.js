@@ -4,7 +4,10 @@ import HomePage from './pages/HomePage'; // Your existing HomePage component
 import LoginPage from './pages/LoginPage'; // New LoginPage component
 import SignUpPage from './pages/RegisterPage';
 import AboutPage from './pages/AboutPage'; 
-import ContactPage from './pages/ContactPage'; 
+import ContactPage from './pages/ContactPage';
+import MiddlePage from './components/middlePage';
+import SecondPage from './components/secondPage';
+
 // New SignUpPage component
 
 function App() {
@@ -17,6 +20,8 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
+      <MiddlePage></MiddlePage>
+      <SecondPage></SecondPage>
     </Router>
   );
 }

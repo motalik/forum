@@ -2,3 +2,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer{
+    /* Aggiungi questo CSS nel tuo file di stile */
+
+@keyframes slideIn {
+    0% {
+      transform: translateX(100%); /* Parte dalla destra */
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%); /* Parte dalla sinistra */
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .category-card {
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+  }
+  
+  .category-card.left {
+    animation-name: slideIn;
+  }
+  
+  .category-card.right {
+    animation-name: slideInLeft;
+  }
+  .animate-slide-right {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+  }
+  
+  /* Optional: Fade-in effect when elements are not in view */
+  .opacity-0 {
+    opacity: 0;
+  }
+}
